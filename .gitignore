@@ -1,0 +1,55 @@
+# .gitignore
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+*.egg-info/
+.eggs/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+develop-eggs/
+parts/
+sdist/
+var/
+
+# IDE / Editor directories
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Generated data and outputs (一般不提交，确保可以由代码重新生成)
+data/processed/
+outputs/
+
+# Environment variables file
+.env
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*~

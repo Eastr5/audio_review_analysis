@@ -1,0 +1,7 @@
+streamlit==1.33.0  # 示例版本，请替换为你环境中的实际版本
+plotly==5.20.0    # 示例版本，请替换为你环境中的实际版本
+pandas==2.2.2
+numpy==1.26.4
+tqdm==4.66.2
+python-dateutil==2.9.0.post0
+pytz==2024.1
