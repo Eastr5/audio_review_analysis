@@ -33,38 +33,37 @@
 
 ## 📂 项目结构
 
-audio_review_analysis/
-├── config.py               # 配置文件 (路径, 关键词等)
-├── main.py                 # 主分析流程入口
-├── dashboard.py            # Streamlit 分析师仪表板应用
-├── consumer_dashboard.py   # Streamlit 消费者仪表板应用 (可选)
-├── requirements.txt        # Python 依赖库
-├── README.md               # 项目说明 (本文档)
-├── DETAILED_DOCS.md        # 详细技术文档
-├── USER_GUIDE.md           # 用户操作指南
-├── OPTIMIZATION.md         # 优化相关说明
-├── data/
-│   ├── raw/                # 存放原始数据 (需要自行准备或使用提供的样本)
-│   │   └── sample_audio_reviews_raw.csv (示例样本数据)
-│   └── processed/          # 存放处理后的数据 (由 main.py 生成)
-│       ├── audio_reviews.csv
-│       └── review_aspects.csv
-├── outputs/
-│   ├── figures/            # 存放生成的 HTML 图表 (由 main.py 生成)
-│   ├── powerbi_data/       # 存放为 Power BI 导出的数据 (由 main.py 生成)
-│   └── finebi_data.xlsx - 主数据.csv # 为 FineBI 导出的数据 (由 main.py 生成)
-└── src/                    # 源代码目录
-├── data/               # 数据处理模块 (acquisition.py, preprocessing.py)
-├── features/           # 特征工程/核心分析模块 (aspect_extraction.py)
-├── visualization/      # 可视化模块 (plots.py)
-└── export/             # 数据导出模块 (powerbi_export.py)
+audio_review_analysis/<br>
+├── config.py               # 配置文件 (路径, 关键词等)<br>
+├── main.py                 # 主分析流程入口<br>
+├── dashboard.py            # Streamlit 分析师仪表板应用<br>
+├── consumer_dashboard.py   # Streamlit 消费者仪表板应用 (可选)<br>
+├── requirements.txt        # Python 依赖库<br>
+├── README.md               # 项目说明 (本文档)<br>
+├── DETAILED_DOCS.md        # 详细技术文档<br>
+├── USER_GUIDE.md           # 用户操作指南<br>
+├── OPTIMIZATION.md         # 优化相关说明<br>
+├── data/<br>
+│   ├── raw/                # 存放原始数据 (需要自行准备或使用提供的样本)<br>
+│   │   └── sample_audio_reviews_raw.csv (示例样本数据)<br>
+│   └── processed/          # 存放处理后的数据 (由 main.py 生成)<br>
+│       ├── audio_reviews.csv<br>
+│       └── review_aspects.csv<br>
+├── outputs/<br>
+│   ├── figures/            # 存放生成的 HTML 图表 (由 main.py 生成)<br>
+│   ├── powerbi_data/       # 存放为 Power BI 导出的数据 (由 main.py 生成)<br>
+│   └── finebi_data.xlsx - 主数据.csv # 为 FineBI 导出的数据 (由 main.py 生成)<br>
+└── src/                    # 源代码目录<br>
+├── data/               # 数据处理模块 (acquisition.py, preprocessing.py)<br>
+├── features/           # 特征工程/核心分析模块 (aspect_extraction.py)<br>
+├── visualization/      # 可视化模块 (plots.py)<br>
+└── export/             # 数据导出模块 (powerbi_export.py)<br>
 
 
 ## ⚙️ 安装
 
 1.  **克隆仓库:**
     ```bash
-    git clone <your-repository-url>
     cd audio_review_analysis
     ```
 2.  **创建并激活虚拟环境 (推荐):**
@@ -114,7 +113,7 @@ audio_review_analysis/
 
 ## 📧 联系
 
-* [你的名字/昵称] - [你的邮箱地址] - [你的 GitHub 个人主页链接 (可选)]
+* [张世昌] - [2022312106@eamil.cufe.edu.cn] - [https://github.com/Eastr5]
 
 ## 📄 许可
 
