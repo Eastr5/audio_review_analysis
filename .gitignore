@@ -42,7 +42,7 @@ Thumbs.db
 # Generated data and outputs (一般不提交，确保可以由代码重新生成)
 data/processed/
 outputs/
-data/raw
+data/raw/
 # Environment variables file
 .env
 
