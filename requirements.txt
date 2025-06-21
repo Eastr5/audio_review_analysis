@@ -5,3 +5,6 @@ numpy==1.26.4
 tqdm==4.66.2
 python-dateutil==2.9.0.post0
 pytz==2024.1
+nltk==3.9.1
+spacy
+wordcloud==1.9.4

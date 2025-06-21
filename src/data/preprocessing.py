@@ -246,28 +246,31 @@ def get_processed_dataset(raw_df=None, save_path='data/processed/processed_audio
     Returns:
         pd.DataFrame: 完整预处理的数据集
     """
-    # 如果保存路径存在，直接加载
+    # 修正后的逻辑：首先尝试加载已存在的文件
     try:
-        try:
-            processed_df = pd.read_csv(save_path, engine='python')
-        except Exception as e:
-            print(f"加载CSV文件失败: {str(e)}")
-            # 尝试使用不同编码重新加载
-            try:
-                processed_df = pd.read_csv(save_path, engine='python', encoding='latin1')
-            except:
-                raise ValueError(f"无法加载处理后的数据文件: {save_path}")
-        print(f"从 {save_path} 加载已处理的数据集")
+        # 如果保存路径存在，直接加载
+        processed_df = pd.read_csv(save_path)
+        print(f"从 {save_path} 加载已处理的数据集，跳过预处理步骤。")
         # 如果已有数据超过限制，则随机采样
         if len(processed_df) > max_reviews:
             processed_df = processed_df.sample(n=max_reviews, random_state=42)
             print(f"随机选取 {max_reviews} 条评论")
         return processed_df
     except FileNotFoundError:
+        # 这是首次运行时的正常路径
+        print(f"未找到已处理的数据文件 '{save_path}'。将从原始数据开始生成。")
+        # `pass` 将让函数继续往下执行，而不是报错退出
         pass
-    
+    except Exception as e:
+        # 捕获其他可能的加载错误，例如文件损坏
+        print(f"加载已有的 '{save_path}' 文件时发生错误: {e}")
+        print("将尝试从原始数据重新生成。")
+        pass
+
+    # 如果未能从文件加载，则继续执行处理流程
     if raw_df is None:
-        raise ValueError("未提供原始数据且未找到已处理数据。")
+        # 这个错误只应该在既没有找到缓存文件，又没有提供原始数据时触发
+        raise ValueError("错误：未提供原始数据DataFrame，且未找到已缓存的处理后数据文件。")
     
     # 如果原始数据超过限制，先随机采样
     if len(raw_df) > max_reviews:

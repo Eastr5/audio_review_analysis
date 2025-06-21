@@ -1,0 +1,48 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>音频产品评论分析仪表盘</title>
+        <style>
+            body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f2f6; color: #333; }
+            .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); gap: 20px; max-width: 1800px; margin: auto; }
+            .card { background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 20px; overflow: hidden;}
+            h1, h2 { text-align: center; color: #1e3a8a; }
+            iframe { width: 100%; height: 550px; border: none; }
+            .footer { text-align: center; margin-top: 30px; font-size: 0.9em; color: #666; }
+        </style>
+    </head>
+    <body>
+        <h1>音频产品评论分析仪表盘 (静态版)</h1>
+        <div class="container">
+            
+        <div class="card">
+            <h2>整体评分分布</h2>
+            <iframe src="rating_distribution.html"></iframe>
+        </div>
+        
+        <div class="card">
+            <h2>音频设备各方面平均分</h2>
+            <iframe src="aspect_scores_radar.html"></iframe>
+        </div>
+        
+        <div class="card">
+            <h2>不同价格区间的方面评分</h2>
+            <iframe src="price_range_comparison.html"></iframe>
+        </div>
+        
+        <div class="card">
+            <h2>品牌方面评分比较热力图</h2>
+            <iframe src="brand_comparison_heatmap.html"></iframe>
+        </div>
+        
+        </div>
+        <div class="footer">
+            <p>这是一个静态生成的报告。图表可交互（悬停、缩放），但无法进行全局筛选。</p>
+            <p>报告生成于: 2025-06-21 14:20:38</p>
+        </div>
+    </body>
+    </html>
+    

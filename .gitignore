@@ -41,7 +41,9 @@ Thumbs.db
 
 # Generated data and outputs (一般不提交，确保可以由代码重新生成)
 data/
-outputs/
+outputs/figures/
+outputs/powerbi_data/
+outputs/finebi_data.xlsx
 
 # Environment variables file
 .env
@@ -53,3 +55,5 @@ logs/
 # Temporary files
 *.tmp
 *~
+
+./OPTIMIZATION.md
