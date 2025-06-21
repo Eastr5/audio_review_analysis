@@ -155,6 +155,7 @@ sudo apt-get update && sudo apt-get install -y fonts-wqy-zenhei fontconfig
 ![](outputs/html_dashboard/brand_comparison_heatmap.png)
 ![](outputs/html_dashboard/rating_distribution.png)
 
+![交互式仪表盘演示](outputs/html_dashboard//动画.gif)
 
 **[➡️ 点击此处，查看离线仪表盘报告](outputs/html_dashboard/dashboard.html)**
 
